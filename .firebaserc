@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "portfolio-compilation"
+  },
+  "targets": {
+    "portfolio-compilation": {
+      "hosting": {
+        "netflix": [
+          "netflix-clone-46d59"
+        ]
+      }
+    }
   }
 }

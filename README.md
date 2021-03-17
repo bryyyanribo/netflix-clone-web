@@ -1,4 +1,4 @@
 # Netflix Clone Web
 
 ### Link
-https://portfolio-compilation.web.app/
+https://netflix-clone-46d59.web.app/
