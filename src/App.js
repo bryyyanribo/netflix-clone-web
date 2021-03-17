@@ -1,49 +1,36 @@
 import React from "react";
+
 import Banner from "./components/banner/banner";
 import Row from "./components/row/row";
-import requests from "./requests";
-import "./App.scss";
 import NavBar from "./components/navbar/navbar";
+
+import * as API from "./utils/api";
+
+import "./App.scss";
 
 const App = () => {
   return (
     <div className="App">
       <NavBar />
       <Banner />
-      <Row
-        title={"Trending Now"}
-        url={requests.fetchTrending}
-        isLargeRow={true}
-      />
+      <Row title={"Trending Now"} url={API.GET_TRENDING} isLargeRow={false} />
       <Row
         title={"Netflix Originals"}
-        url={requests.fetchNetflixOriginals}
+        url={API.GET_NETFLIX_ORIGINALS}
         isLargeRow={true}
       />
-      <Row title={"Top Rated"} url={requests.fetchTopRated} isLargeRow={true} />
+      <Row title={"Top Rated"} url={API.GET_TOP_RATED} isLargeRow={true} />
       <Row
         title={"Action Movies"}
-        url={requests.fetchActionMovies}
+        url={API.GET_ACTION_MOVIES}
         isLargeRow={true}
       />
-      <Row
-        title={"Comedy Movies"}
-        url={requests.fetchComedyMovies}
-        isLargeRow={true}
-      />
-      <Row
-        title={"Horror Movies"}
-        url={requests.fetchHorrorMovies}
-        isLargeRow={true}
-      />
-      <Row
-        title={"Romance Movies"}
-        url={requests.fetchRomanceMovies}
-        isLargeRow={true}
-      />
+      <Row title={"Comedy Movies"} url={API.GET_COMEDY} isLargeRow={true} />
+      <Row title={"Horror Movies"} url={API.GET_HORROR} isLargeRow={true} />
+      <Row title={"Romance Movies"} url={API.GET_ROMANCE} isLargeRow={true} />
       <Row
         title={"Documentaries Movies"}
-        url={requests.fetchDocumentaries}
+        url={API.GET_DOCUMENTARIES}
         isLargeRow={true}
       />
     </div>
